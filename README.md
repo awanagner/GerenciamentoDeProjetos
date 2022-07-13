@@ -3,7 +3,7 @@
    Padrões utilizados no refatoramento: 
    
    
-                                          * State:
+                                         * State:
                                           - Status.java, EmCriacao.java, Iniciado.java, EmAndamento.java, Concluido.java;
                                         
                                         * Extract Method:
@@ -15,4 +15,4 @@
                                           - Publicacao.java: imprimirAutores(), imprimirProjetoAssociado(), imprimir(), toString();
                                           - Colaborador.java: imprimirPublicaoes(), imprimir(), toString();
                                           - Participantes.java: imprimirAtividades(), toString().
- */
+
