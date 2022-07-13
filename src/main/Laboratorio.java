@@ -32,7 +32,7 @@ public class Laboratorio {
 
     public static void adicionarAtividade(String titulo1, Date dataInicio1, Date dataFim1, String nomeColab,
 			String nomeColab2, String tituloProj) {
-        Atividade pub = null;
+        Atividade pub = new Atividade(titulo1, dataInicio1, dataFim1);
 		listaAtividades.add(pub);
         for(Colaborador colab : listaColaboradores) {
             String nomeProf = null;
