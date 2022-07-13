@@ -101,7 +101,7 @@ public class Sistema {
 								System.out.println("A descrição do projeto precisa ser inserida.");
 							}
 						} while (!concluido);
-
+						System.out.println("---- "+dataInicio);
 						proj = new Projeto(tituloProj, dataInicio, dataTermino, objetivo, descricao);
 
 						Laboratorio.adicionarProjeto(proj);
@@ -324,7 +324,8 @@ public class Sistema {
 								System.out.println("Digite o nome do responsável pela atividade:");
 								nomeColab = entradaString.nextLine();
 								if (Laboratorio.pesquisarColaborador(nomeColab2) == null) {
-									Laboratorio.adicionarAtividade(titulo1, dataInicio1, dataFim1, nomeColab, nomeColab2, tituloProj);
+									System.out.println("------"+dataInicio);
+									Laboratorio.adicionarAtividade(titulo1, dataInicio, dataTermino, nomeColab, nomeColab2, tituloProj);
 									System.out.println("\nAtividade adicionada com sucesso.\n");
 									break;
 								}
@@ -335,6 +336,7 @@ public class Sistema {
 						break;
 
 					case 6:     //6 - Consultar atividade
+						boolean volta = false;
 						if (!Laboratorio.getListaAtividades().isEmpty()){
 							System.out.println("\nDigite o título da atividade a ser consultada:");
 							titulo1 = entradaString.nextLine();
@@ -412,14 +414,15 @@ public class Sistema {
 									}while (menu2 != 2);
 									break;
 								case 3:
+									volta = true;
 									break;
 
 								default:
 									System.out.println("\nOpção inválida.\n");
 
-								}while (menu2 != 2);
+								}while (menu2 != 2 && !volta);
 								break;
-							}while (menu2 != 2);
+							}while (menu2 != 2 && !volta);
 							break;
 						}
 						else {
