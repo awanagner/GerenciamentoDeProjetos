@@ -1,6 +1,6 @@
 
 # GERENCIAMENTO DE PROJETOS 
-   Padrões utilizados no refatoramento: 
+   Padrões utilizados no projeto: 
    
    
                                          * State:
